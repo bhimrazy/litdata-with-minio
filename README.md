@@ -1,4 +1,9 @@
-# Use LitData with MinIO
+<div align="center">
+  <h1>Use LitData with MinIO</h1>
+  <img src="https://github.com/bhimrazy/litdata-with-minio/assets/46085301/49e34dc3-8176-4395-b628-99c315f5e7c2" alt="LitData with MinIO" width="640" height="360">
+   <br/>
+</div>
+
 
 LitData empowers efficient data optimization and distributed training across cloud storage environments, supporting diverse data types like images, text, and video. Pairing seamlessly with MinIO—a high-performance, S3-compatible object store designed for large-scale AI/ML, data lakes, and databases—this integration exemplifies streamlined, scalable data handling for modern applications.
 
