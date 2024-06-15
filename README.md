@@ -43,8 +43,8 @@ export AWS_ENDPOINT_URL=http://localhost:9000
 mkdir -p ~/.aws && \
 cat <<EOL >> ~/.aws/credentials
 [default]
-aws_access_key_id = nPa2gqrlACrwvmUp28mf
-aws_secret_access_key = IdcOtazqxXIFcumFLDWi5RRSlbJWhbGNQMAlq7Bo
+aws_access_key_id = access_key
+aws_secret_access_key = secret_key
 EOL
 
 cat <<EOL >> ~/.aws/config
