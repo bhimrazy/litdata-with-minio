@@ -16,7 +16,7 @@ LitData empowers efficient data optimization and distributed training across clo
    docker-compose up -d
    ```
 
-   Access MinIO at [http://localhost:9000](http://localhost:9001) with default credentials:
+   Access MinIO at [http://localhost:9001](http://localhost:9001) with default credentials:
 
    - Username: `MINIO_ROOT_USER`
    - Password: `MINIO_ROOT_PASSWORD`
