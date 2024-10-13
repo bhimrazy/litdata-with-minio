@@ -54,6 +54,8 @@ EOL
 
 cat <<EOL >> ~/.aws/config
 [default]
+region = us-east-1
+output = json
 endpoint_url = http://localhost:9000
 EOL
 ```
