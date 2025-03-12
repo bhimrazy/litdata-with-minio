@@ -32,7 +32,7 @@ LitData empowers efficient data optimization and distributed training across clo
 
 ### Step 1: Setup AWS Configuration
 
-You can configure AWS credentials for MinIO access either via environment variables or by creating a `~/.aws/{credentials,config}` file.
+You can configure AWS credentials for MinIO access either via environment variables, using the `aws configure` command, or by creating a `~/.aws/{credentials,config}` file.
 
 **Using Environment Variables:**
 
@@ -59,6 +59,23 @@ output = json
 endpoint_url = http://localhost:9000
 EOL
 ```
+
+**Using `aws cli`:**
+```bash
+# configure
+aws configure
+
+# or configure using profile
+aws configure --profile your_profile
+
+# or using aws configure set
+aws configure set aws_access_key_id access_key
+aws configure set aws_secret_access_key secret_key
+aws configure set region us-east-1
+aws configure set output json
+aws configure set endpoint_url http://localhost:9000
+```
+
 
 ### Step 2: Prepare Data
 
