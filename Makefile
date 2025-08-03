@@ -27,12 +27,13 @@ install:
 	@if ! command -v uv &> /dev/null; then \
 		echo "uv not found, installing with curl..."; \
 		(curl -LsSf https://astral.sh/uv/install.sh | sh) && \
-		$$HOME/.cargo/bin/uv venv --python=3.10 && \
-		$$HOME/.cargo/bin/uv pip install -r requirements.txt; \
+		$HOME/.cargo/bin/uv venv --python=3.10 && \
+		$HOME/.cargo/bin/uv sync; \
 	else \
 		uv venv --python=3.10 && \
-		uv pip install -r requirements.txt; \
+		uv sync; \
 	fi
+
 
 setup-credentials:
 	@if [ ! -f ~/.aws/credentials ]; then \

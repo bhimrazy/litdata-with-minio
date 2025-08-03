@@ -89,7 +89,7 @@ Follow these steps if you prefer a manual approach or do not have `make`.
     source .venv/bin/activate
 
     # Install packages
-    uv pip install -r requirements.txt
+    uv sync
     ```
 
 3.  **Start MinIO Server**:

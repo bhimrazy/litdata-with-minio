@@ -37,10 +37,10 @@ jobs:
         run: cp .env.example .env
 
       - name: Install dependencies
-        run: uv pip install -r requirements.txt
+        run: uv sync
 
       - name: Start services
-        run: docker-compose up -d
+        run: make up
 
       - name: Run end-to-end test
         run: |
