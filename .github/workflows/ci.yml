@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 0 * * *' # Run every day at midnight UTC
+
+jobs:
+  lint:
+    name: Lint and Format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run ruff linter and formatter
+        uses: astral-sh/ruff-action@v3
+        with:
+          # Check for formatting issues in addition to linting
+          format: check
+
+  test:
+    name: End-to-End Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python and uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          activate-environment: true
+          python-version: "3.11"
+          enable-cache: true
+
+      - name: Create .env file
+        run: cp .env.example .env
+
+      - name: Install dependencies
+        run: uv pip install -r requirements.txt
+
+      - name: Start services
+        run: docker-compose up -d
+
+      - name: Run end-to-end test
+        run: |
+          make prepare-data
+          make upload-data
+          make stream-data
