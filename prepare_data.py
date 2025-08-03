@@ -21,7 +21,7 @@ def random_images(index):
     with io.BytesIO() as buffer:
         pil_image.save(buffer, format="JPEG")
         jpeg_bytes = buffer.getvalue()
-    
+
     jpeg_image = Image.open(io.BytesIO(jpeg_bytes))
 
     data = {

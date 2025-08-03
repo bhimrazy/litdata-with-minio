@@ -4,17 +4,14 @@ version = "0.1.0"
 description = "A demonstration of using Lightning AI's LitData with a MinIO S3-compatible object store."
 readme = "README.md"
 requires-python = ">=3.10"
-authors = [
-    { name = "Bhimraj Yadav", email = "bhimrajyadav977@gmail.com" },
-]
-dependencies = [
-    "awscli",
-    "litdata",
-    "numpy",
-    "pillow",
-    "python-dotenv",
-]
+authors = [{ name = "Bhimraj Yadav", email = "bhimrajyadav977@gmail.com" }]
+dependencies = ["awscli", "litdata", "numpy", "pillow", "python-dotenv"]
 
-[project.urls]
-Homepage = "https://github.com/bhimrazy/litdata-with-minio"
-"Bug Tracker" = "https://github.com/bhimrazy/litdata-with-minio/issues"
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu" }]
+torchvision = [{ index = "pytorch-cpu" }]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
