@@ -1,6 +1,6 @@
 [project]
 name = "litdata-with-minio"
-version = "0.1.0"
+version = "0.2.0"
 description = "A demonstration of using Lightning AI's LitData with a MinIO S3-compatible object store."
 readme = "README.md"
 requires-python = ">=3.10"
