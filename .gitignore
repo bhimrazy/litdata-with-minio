@@ -164,3 +164,4 @@ cython_debug/
 # minio
 data/
 my_optimized_dataset/
+cache/
