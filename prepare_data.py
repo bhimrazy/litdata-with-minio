@@ -21,13 +21,14 @@ def random_images(index):
     with io.BytesIO() as buffer:
         pil_image.save(buffer, format="JPEG")
         jpeg_bytes = buffer.getvalue()
+    
+    jpeg_image = Image.open(io.BytesIO(jpeg_bytes))
 
     data = {
         "index": index,  # int data type
-        "image": jpeg_bytes,  # JPEG image as raw bytes
-        "class": np.random.randint(10),  # numpy array data type
+        "image": jpeg_image,  # JPEG image
+        "class": np.random.randint(10),  # class
     }
-    # The data is serialized and stored into data chunks by the optimize operator.
     return data
 
 
