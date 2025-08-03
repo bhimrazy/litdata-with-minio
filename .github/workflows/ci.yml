@@ -21,8 +21,6 @@ jobs:
 
   test:
     name: End-to-End Test
-    env:
-      UV_TORCH_BACKEND: "cpu"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
