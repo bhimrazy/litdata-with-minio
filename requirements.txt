@@ -2,3 +2,4 @@ awscli
 litdata
 numpy
 pillow
+python-dotenv

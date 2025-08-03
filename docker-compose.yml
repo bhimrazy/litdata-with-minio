@@ -8,11 +8,13 @@ services:
       - 9000:9000
       - 9001:9001
     networks:
-      - traefik-minio
+      - minio
     environment:
-      MINIO_ROOT_USER: minioadmin
-      MINIO_ROOT_PASSWORD: minioadmin
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+    env_file:
+      - .env
 
 networks:
-  traefik-minio:
-    name: traefik-minio
+  minio:
+    name: minio
