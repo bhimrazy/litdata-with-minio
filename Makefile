@@ -49,10 +49,10 @@ setup-credentials:
 	fi
 
 up:
-	@docker-compose up -d
+	@docker compose up -d
 
 down:
-	@docker-compose down
+	@docker compose down
 
 clean:
 	@rm -rf my_optimized_dataset/

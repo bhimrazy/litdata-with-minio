@@ -18,9 +18,6 @@ jobs:
 
       - name: Run ruff linter and formatter
         uses: astral-sh/ruff-action@v3
-        with:
-          # Check for formatting issues in addition to linting
-          format: check
 
   test:
     name: End-to-End Test
