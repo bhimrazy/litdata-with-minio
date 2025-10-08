@@ -1,7 +1,12 @@
 <div align="center">
   <h1>Use LitData with MinIO</h1>
-  <img src="https://github.com/bhimrazy/litdata-with-minio/assets/46085301/49e34dc3-8176-4395-b628-99c315f5e7c2" alt="LitData with MinIO" width="640" height="360">
-   <br/>
+  <img src="https://github.com/bhimrazy/litdata-with-minio/actions/workflows/ci.yml/badge.svg" alt="CI Status"/>
+  <a href="https://github.com/bhimrazy/litdata-with-minio/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/bhimrazy/litdata-with-minio" alt="License"/>
+  </a>
+  <br/>
+  <img src="https://github.com/bhimrazy/litdata-with-minio/assets/46085301/49e34dc3-8176-4395-b628-99c315f5e7c2" alt="LitData with MinIO" width="640" height="360"/>
+  <br/>
 </div>
 
 LitData empowers efficient data optimization and distributed training across cloud storage environments. Pairing it with MinIO—a high-performance, S3-compatible object store—exemplifies a streamlined and scalable data handling workflow for modern AI applications.
